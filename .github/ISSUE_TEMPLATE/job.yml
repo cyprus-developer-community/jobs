@@ -1,0 +1,60 @@
+name: Job
+description: Create a new job posting
+title: 'Job Title'
+labels: ['job']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Hey there :wave:. You can use this form to create a job posting on the Cyprus Developer Community Job Board. Please make sure to fill out all the required fields.
+  - type: textarea
+    id: description
+    attributes:
+      label: Job Description
+      description:
+        A concise description who you're looking for and what the job entails.
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Remote or Location in Cyprus (no foreign locations please)
+      placeholder: 'Remote'
+    validations:
+      required: true
+  - type: input
+    id: startDate
+    attributes:
+      label: Date
+      description: Start Date
+      placeholder: '01.01.2023'
+    validations:
+      required: true
+  - type: input
+    id: salaryRange
+    attributes:
+      label: Salary Range
+      description: Salary Range
+      placeholder: 'ie. 45k - 55k / year'
+    validations:
+      required: true
+  - type: textarea
+    id: perks
+    attributes:
+      label: Additional Information & Perks
+      description: What else can you offer? (ie. Remote, Flexible Hours, etc.)
+    validations:
+      required: false
+  - type: checkboxes
+    id: code-of-conduct
+    attributes:
+      label: Code of Conduct
+      description:
+        The Code of Conduct helps create a safe space for everyone. We require
+        that everyone agrees to it.
+      options:
+        - label:
+            I agree to follow this project's [Code of
+            Conduct](https://berlincodeofconduct.org)
+          required: true
